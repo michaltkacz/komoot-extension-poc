@@ -1,0 +1,89 @@
+/* Light-green Light scheme (Default) */
+/* Can be forced with data-theme="light" */
+[data-theme='light'],
+:root:not([data-theme='dark']) {
+  --primary: #7cb342;
+  --primary-hover: #689f38;
+  --primary-focus: rgba(124, 179, 66, 0.125);
+  --primary-inverse: #fff;
+}
+
+/* Light-green Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --primary: #7cb342;
+    --primary-hover: #8bc34a;
+    --primary-focus: rgba(124, 179, 66, 0.25);
+    --primary-inverse: #fff;
+  }
+}
+
+/* Light-green Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme='dark'] {
+  --primary: #7cb342;
+  --primary-hover: #8bc34a;
+  --primary-focus: rgba(124, 179, 66, 0.25);
+  --primary-inverse: #fff;
+}
+
+/* Light-green (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.error {
+  color: #b71c1c;
+}
+
+.success {
+  color: #388e3c;
+}
+
+.input-group {
+  display: flex;
+}
+
+.input-group > :first-child {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.input-group > :last-child {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.input-group > input {
+  flex: 0.75;
+}
+
+.input-group > button {
+  flex: 0.25;
+}
+
+.input-group > :not(:first-child):not(:last-child) {
+  border-radius: 0 !important;
+}
+
+.input-group > * {
+  margin-bottom: 0 !important;
+}

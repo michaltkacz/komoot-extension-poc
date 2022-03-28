@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Popup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body style="width: 400px !important; " class="container-fluid">
+    <main>
+        <hgroup>
+            <h1>Heatmap for Komoot</h1>
+            <h2>Instructions</h2>
+        </hgroup>
+        <ol>
+            <li><a href="https://www.komoot.com/account/privacy" target="_blank">Set your profile and all tours to
+                    public</a></li>
+            <li><label for="userIdInput">Enter your <a href="https://www.komoot.com/account/details"
+                        target="_blank">User ID</a> and hit the button to create the heatmap
+                    <div class="input-group">
+                        <input type="number" list="userIdsList" id="userIdInput" placeholder="User ID" required />
+                        <datalist id="userIdsList">
+                        </datalist>
+                        <button id="createHeatmapButton" role="button" class="outline">CREATE</button>
+                    </div>
+                    <progress id="progress" class="hidden"></progress>
+                </label>
+            </li>
+            <li>Wait patiently. Don't close this popup. First sync has no cache and will take more time (aprox.
+                1sec/1tour)</li>
+        </ol>
+        <hr />
+        <small>In case of error, please refresh the Komoot page and try again</small>
+        <div id="alertContainer"></div>
+        <a href="#" class="secondary" id="clearCacheButton">Clear cache</a>
+        <span>&#8226</span>
+        <a href="#" class="secondary" id="clearUsersButton">Clear User IDs</a>
+    </main>
+</body>
+
+</html>
