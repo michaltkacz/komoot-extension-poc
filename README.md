@@ -1,8 +1,6 @@
-# Heatmap for Komoot Chrome Extension
+# Komoot Extension POC
 
-> Chrome extension adding Heatmap feature to Komoot web application
-
-Version 1.0.0
+> Proof of concept for a chrome extension adding the heatmap feature to Komoot web application
 
 ## Installation
 
